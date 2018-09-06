@@ -3,8 +3,6 @@ output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-  [![Travis build status](https://travis-ci.com/muschellij2/mFilter.svg?branch=master)](https://travis-ci.com/muschellij2/mFilter)
-  [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/muschellij2/mFilter?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/mFilter)
   
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
@@ -30,6 +28,12 @@ You can install the released version of mFilter from [CRAN](https://CRAN.R-proje
 
 ``` r
 install.packages("mFilter")
+```
+
+The development version can be installed with:
+
+``` r
+devtools::install_github("mbalcilar/mFilter")
 ```
 
 ## Example
