@@ -1,0 +1,26 @@
+#useDynLib("mFilter")
+
+import("graphics", "stats", "utils")
+
+export("mFilter",
+#       "mFilter.default",
+#       "mFilter.ts",
+       "bwfilter",
+       "bkfilter",
+       "cffilter",
+       "hpfilter",
+       "trfilter",
+       "print.mFilter",
+       "summary.mFilter",
+       "plot.mFilter",
+       "fitted.mFilter",
+       "residuals.mFilter"
+       )
+
+S3method("mFilter", "ts")
+S3method("print", "mFilter")
+S3method("summary", "mFilter")
+S3method("plot", "mFilter")
+S3method("fitted", "mFilter")
+S3method("residuals", "mFilter")
+
