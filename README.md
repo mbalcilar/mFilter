@@ -31,20 +31,12 @@ This is a basic example which shows you how to do Butterworth filtering:
 
 ``` r
 library(mFilter)
-#> 
-#>     'mFilter' version: 0.1-3
-#> 
-#>     'mFilter' is a package for time series filtering
-#> 
-#>     See 'library(help="mFilter")' for details
-#> 
-#>     Author: Mehmet Balcilar, mbalcilar@yahoo.com
 data(unemp)
 unemp.bw <- bwfilter(unemp)
 plot(unemp.bw)
 ```
 
-<img src="man/figures/README-unnamed-chunk-1-1.png" width="100%" />
+<img src="man/figures/README-ex1-1.png" width="100%" />
 
 ``` r
 unemp.bw1 <- bwfilter(unemp, drift=TRUE)
@@ -67,7 +59,7 @@ legend("topleft",legend=c("series", "freq=10, nfix=2",
        col=1:5, lty=rep(1,5), ncol=1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-ex2-1.png" width="100%" />
 
 ``` r
 plot(unemp.bw1$cycle,
