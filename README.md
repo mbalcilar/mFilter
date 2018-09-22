@@ -36,7 +36,7 @@ unemp.bw <- bwfilter(unemp)
 plot(unemp.bw)
 ```
 
-![](README-ex1-1.png)<!-- -->
+<img src="man/figures/README-ex1-1.png" width="100%" />
 
 ``` r
 unemp.bw1 <- bwfilter(unemp, drift=TRUE)
@@ -59,7 +59,7 @@ legend("topleft",legend=c("series", "freq=10, nfix=2",
        col=1:5, lty=rep(1,5), ncol=1)
 ```
 
-![](README-ex2-1.png)<!-- -->
+<img src="man/figures/README-ex2-1.png" width="100%" />
 
 ``` r
 plot(unemp.bw1$cycle,
@@ -70,4 +70,4 @@ lines(unemp.bw3$cycle,col=4)
 lines(unemp.bw4$cycle,col=5)
 ```
 
-![](README-ex3-1.png)<!-- -->
+<img src="man/figures/README-ex3-1.png" width="100%" />
