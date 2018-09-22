@@ -18,7 +18,7 @@ time series data.  The function invokes particular
 \code{filter}. The filters implemented in the package \code{mFilter}
 package are useful for smoothing, and estimating tend and cyclical components.
 Some of these filters are commonly used in economics and
-finance for estimating cyclical component of time series. 
+finance for estimating cyclical component of time series.
 
 The \code{mFilter} currently applies only to time series
 objects. However a default method is available and should work for any
@@ -38,7 +38,7 @@ objects. However a default method is available and should work for any
 
 \arguments{
   \item{x}{a regular a time series.}
-  
+
   \item{filter}{filter type, the filter types are \code{"HP"}
   (Hodrick-Prescott), \code{"BK"} (Baxter-King), \code{"CF"}
   (Christiano-Fitzgerald), \code{"BW"} (Butterworth), and \code{"TR"}
@@ -59,7 +59,7 @@ series, the trend, and the cyclical components. The function \code{print} is als
 for displaying estimation results.
 
 The generic accessor functions \code{fitted} and \code{residuals}
-extract estimated trend and cylclical componets of an "\code{mFilter}"
+extract estimated trend and cyclical componets of an "\code{mFilter}"
 object, respectively.
 
 An object of class "\code{mFilter}" is a list containing at least the following elements:
@@ -146,21 +146,21 @@ lines(unemp.tr$cycle,col=6)
 unemp.cf1 <- mFilter(unemp,filter="CF", drift=TRUE, root=TRUE)
 unemp.cf2 <- mFilter(unemp,filter="CF", pl=8,pu=40,drift=TRUE, root=TRUE)
 unemp.cf3 <- mFilter(unemp,filter="CF", pl=2,pu=60,drift=TRUE, root=TRUE)
-unemp.cf4 <- mFilter(unemp,filter="CF", pl=2,pu=40,drift=TRUE, 
+unemp.cf4 <- mFilter(unemp,filter="CF", pl=2,pu=40,drift=TRUE,
              root=TRUE,theta=c(.1,.4))
 
 plot(unemp,
-main="Christiano-Fitzgerald filter of unemployment: Trend \n root=TRUE,drift=TRUE", 
+main="Christiano-Fitzgerald filter of unemployment: Trend \n root=TRUE,drift=TRUE",
       col=1, ylab="")
 lines(unemp.cf1$trend,col=2)
 lines(unemp.cf2$trend,col=3)
 lines(unemp.cf3$trend,col=4)
 lines(unemp.cf4$trend,col=5)
-legend("topleft",legend=c("series", "pl=2, pu=32", "pl=8, pu=40", 
+legend("topleft",legend=c("series", "pl=2, pu=32", "pl=8, pu=40",
 "pl=2, pu=60", "pl=2, pu=40, theta=.1,.4"), col=1:5, lty=rep(1,5), ncol=1)
 
 plot(unemp.cf1$cycle,
-main="Christiano-Fitzgerald filter of unemployment: Cycle \n root=TRUE,drift=TRUE", 
+main="Christiano-Fitzgerald filter of unemployment: Cycle \n root=TRUE,drift=TRUE",
      col=2, ylab="", ylim=range(unemp.cf3$cycle))
 lines(unemp.cf2$cycle,col=3)
 lines(unemp.cf3$cycle,col=4)
