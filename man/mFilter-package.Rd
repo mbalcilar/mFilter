@@ -38,7 +38,7 @@ Almost all filters in this package can be put into the following
 framework. Given a time series \eqn{\{x_t\}^T_{t=1}} we are interested
 in isolating component of \eqn{x_t}, denoted \eqn{y_t} with period of
 oscillations between \eqn{p_l} and \eqn{p_u}, where \eqn{2
-  \le p_l < p_u < \infty}. 
+  \le p_l < p_u < \infty}.
 
 Consider the following decomposition of the time series
 \deqn{x_t = y_t + \bar{x}_t}
@@ -87,12 +87,12 @@ where
 \deqn{\hat{B}_j=B_j-\frac{1}{2n+1}\sum^{n}_{j=-n} B_{j}}
 
 The Hodrick-Prescott filter obtains the filter weights \eqn{\hat{B}_j}
-as a solution to 
+as a solution to
 \deqn{\hat{B}_{j}= \arg \min E \{ (y_t-\hat{y}_t)^2 \} = \arg \min
 \left\{ \sum^{T}_{t=1}(y_t-\hat{y}_{t})^2 + \lambda\sum^{T-1}_{t=2}(\hat{y}_{t+1}-2\hat{y}_{t}+\hat{y}_{t-1})^2 \right\}}
 
 The Hodrick-Prescott filter is a finite data approximation with
-following moving average weights 
+following moving average weights
 \deqn{\hat{B}_j=\frac{1}{2\pi}\int^{\pi}_{-\pi}
 \frac{4\lambda(1-\cos(\omega))^2}{1+4\lambda(1-\cos(\omega))^2}e^{i \omega
 j}  d \omega}
@@ -165,7 +165,7 @@ filters. Journal of Econometrics, 99:317-334, 2000.
 
 
 \author{
-  Mehmet Balcilar, \email{mbalcilar@yahoo.com}
+  Mehmet Balcilar, \email{mehmet@mbalcilar.net}
 }
 
 \seealso{
@@ -175,7 +175,7 @@ available \code{mFilter} methods. For help on common interface function
 usage, \code{\link{bwfilter}}, \code{\link{bkfilter}},
 \code{\link{cffilter}}, \code{\link{hpfilter}}, \code{\link{trfilter}}.
 }
-    
+
 \keyword{ts}
 \keyword{smooth}
 \keyword{loess}

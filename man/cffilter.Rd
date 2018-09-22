@@ -9,7 +9,7 @@
   This function implements the Christiano-Fitzgerald approximation to
   the ideal band pass filter for a time series. The function computes cyclical
   and trend components of the time series using several band-pass
-  approximation strategies. 
+  approximation strategies.
 }
 
 \usage{
@@ -40,7 +40,7 @@ cffilter(x,pl=NULL,pu=NULL,root=FALSE,drift=FALSE,
 
   \item{drift}{logical, \code{FALSE} if no drift in time series
     (default),  \code{TRUE} if drift in time series.}
-  
+
   \item{nfix}{sets fixed lead/lag length or order of the filter with
     \code{"baxter-king"} and \code{"fixed"}. The \code{nfix} option sets
   the order of the filter by 2*nfix+1. The default is \code{nfix=1}.}
@@ -55,7 +55,7 @@ cffilter(x,pl=NULL,pu=NULL,root=FALSE,drift=FALSE,
 following framework. Given a time series \eqn{\{x_t\}^T_{t=1}} we are
 interested in isolating component of \eqn{x_t}, denoted \eqn{y_t} with
 period of oscillations between \eqn{p_l} and \eqn{p_u}, where \eqn{2
-  \le p_l < p_u < \infty}. 
+  \le p_l < p_u < \infty}.
 
 Consider the following decomposition of the time series
 \deqn{x_t = y_t + \bar{x}_t}
@@ -125,7 +125,7 @@ filters. Journal of Econometrics, 99:317-334, 2000.
 }
 
 \author{
-  Mehmet Balcilar, \email{mbalcilar@yahoo.com}
+  Mehmet Balcilar, \email{mehmet@mbalcilar.net}
 }
 
 \seealso{
@@ -159,7 +159,7 @@ legend("topleft",legend=c("series", "pl=2, pu=32", "pl=8, pu=40", "pl=2, pu=60",
 "pl=2, pu=40, theta=.1,.4"), col=1:5, lty=rep(1,5), ncol=1)
 
 plot(unemp.cf1$cycle,
-main="Christiano-Fitzgerald filter of unemployment: Cycle \n root=TRUE,drift=TRUE", 
+main="Christiano-Fitzgerald filter of unemployment: Cycle \n root=TRUE,drift=TRUE",
 col=2, ylab="", ylim=range(unemp.cf3$cycle))
 lines(unemp.cf2$cycle,col=3)
 lines(unemp.cf3$cycle,col=4)

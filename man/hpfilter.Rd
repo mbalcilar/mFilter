@@ -9,7 +9,7 @@
   This function implements the Hodrick-Prescott for estimating cyclical
   and trend component of a time series. The function computes cyclical
   and trend components of the time series using a frequency cut-off or
-  smoothness parameter. 
+  smoothness parameter.
 }
 
 \usage{
@@ -18,10 +18,10 @@ hpfilter(x,freq=NULL,type=c("lambda","frequency"),drift=FALSE)
 
 \arguments{
   \item{x}{a regular time series.}
-  
+
   \item{type}{character, indicating the filter type,
     \code{"lambda"}, for the filter that uses smoothness penalty
-    parameter of the Hodrick-Prescott filter 
+    parameter of the Hodrick-Prescott filter
     (default),
     \code{"frequency"}, for the filter that uses a frequency cut-off
     type Hodrick-Prescott filter. These are related by
@@ -41,7 +41,7 @@ hpfilter(x,freq=NULL,type=c("lambda","frequency"),drift=FALSE)
 following framework. Given a time series \eqn{\{x_t\}^T_{t=1}} we are
 interested in isolating component of \eqn{x_t}, denoted \eqn{y_t} with
 period of oscillations between \eqn{p_l} and \eqn{p_u}, where \eqn{2
-  \le p_l < p_u < \infty}. 
+  \le p_l < p_u < \infty}.
 
 Consider the following decomposition of the time series
 \deqn{x_t = y_t + \bar{x}_t}
@@ -61,12 +61,12 @@ The ideal bandpass filter weights are given by
 \deqn{B_0=\frac{b-a}{\pi}}
 
 The Hodrick-Prescott filter obtains the filter weights \eqn{\hat{B}_j}
-as a solution to 
+as a solution to
 \deqn{\hat{B}_{j}= \arg \min E \{ (y_t-\hat{y}_t)^2 \} = \arg \min
 \left\{ \sum^{T}_{t=1}(y_t-\hat{y}_{t})^2 + \lambda\sum^{T-1}_{t=2}(\hat{y}_{t+1}-2\hat{y}_{t}+\hat{y}_{t-1})^2 \right\}}
 
 The Hodrick-Prescott filter is a finite data approximation with
-following moving average weights 
+following moving average weights
 \deqn{\hat{B}_j=\frac{1}{2\pi}\int^{\pi}_{-\pi}
 \frac{4\lambda(1-\cos(\omega))^2}{1+4\lambda(1-\cos(\omega))^2}e^{i \omega
 j}  d \omega}
@@ -100,7 +100,7 @@ filters. Journal of Econometrics, 99:317-334, 2000.
 }
 
 \author{
-  Mehmet Balcilar, \email{mbalcilar@yahoo.com}
+  Mehmet Balcilar, \email{mehmet@mbalcilar.net}
 }
 
 \seealso{
@@ -130,11 +130,11 @@ lines(unemp.hp1$trend,col=2)
 lines(unemp.hp2$trend,col=3)
 lines(unemp.hp3$trend,col=4)
 lines(unemp.hp4$trend,col=5)
-legend("topleft",legend=c("series", "lambda=1600", "lambda=800", 
+legend("topleft",legend=c("series", "lambda=1600", "lambda=800",
        "freq=12", "freq=52"), col=1:5, lty=rep(1,5), ncol=1)
 
 plot(unemp.hp1$cycle,
-main="Hodrick-Prescott filter of unemployment: Cycle,drift=TRUE", 
+main="Hodrick-Prescott filter of unemployment: Cycle,drift=TRUE",
      col=2, ylab="", ylim=range(unemp.hp4$cycle,na.rm=TRUE))
 lines(unemp.hp2$cycle,col=3)
 lines(unemp.hp3$cycle,col=4)

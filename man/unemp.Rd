@@ -28,12 +28,11 @@ data(unemp)
 
 \references{
   Stock, James H.  and  Mark W.  Watson (2003) \emph{Introduction to
-  Econometrics}, Addison-Wesley Educational Publishers,
-\url{http://wps.aw.com/aw_stockwatsn_economtrcs_1}, chapter 12 and 14.
+  Econometrics}, Addison-Wesley Educational Publishers, chapter 12 and 14.
 }
 
 \author{
-  Mehmet Balcilar, \email{mbalcilar@yahoo.com}
+  Mehmet Balcilar, \email{mehmet@mbalcilar.net}
 }
 
 \examples{

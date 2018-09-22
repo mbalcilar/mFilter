@@ -29,7 +29,7 @@
   \item{ask}{logical. if \code{TRUE} the user is asked for input before a new
     graph drawn in an interactive session (see \code{\link{interactive}}).}
   \item{reference.grid}{logical. if true grid lines are drawn.}
-  \item{\dots}{further arguments passed to or from other methods.} 
+  \item{\dots}{further arguments passed to or from other methods.}
 }
 
 \value{
@@ -39,7 +39,7 @@
 }
 
 \author{
-  Mehmet Balcilar, \email{mbalcilar@yahoo.com}
+  Mehmet Balcilar, \email{mehmet@mbalcilar.net}
 }
 
 \seealso{

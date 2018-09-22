@@ -7,7 +7,7 @@
 
 \description{
   Filters a time series using the Butterworth square-wave
-highpass filter described in Pollock (2000). 
+highpass filter described in Pollock (2000).
 }
 
 \usage{
@@ -19,7 +19,7 @@ bwfilter(x,freq=NULL,nfix=NULL,drift=FALSE)
 
   \item{nfix}{sets the order of the filter. The default is
   \code{nfix=2}, when \code{nfix=NULL}.}
-  
+
   \item{freq}{integer, the cut-off frequency of the Butterworth
   filter. The default is \code{trunc(2.5*frequency(x))}.}
 
@@ -32,7 +32,7 @@ bwfilter(x,freq=NULL,nfix=NULL,drift=FALSE)
 following framework. Given a time series \eqn{\{x_t\}^T_{t=1}} we are
 interested in isolating component of \eqn{x_t}, denoted \eqn{y_t} with
 period of oscillations between \eqn{p_l} and \eqn{p_u}, where \eqn{2
-  \le p_l < p_u < \infty}. 
+  \le p_l < p_u < \infty}.
 
 Consider the following decomposition of the time series
 \deqn{x_t = y_t + \bar{x}_t}
@@ -93,7 +93,7 @@ filters. Journal of Econometrics, 99:317-334, 2000.
 }
 
 \author{
-  Mehmet Balcilar, \email{mbalcilar@yahoo.com}
+  Mehmet Balcilar, \email{mehmet@mbalcilar.net}
 }
 
 \seealso{
@@ -117,24 +117,24 @@ unemp.bw4 <- bwfilter(unemp, freq=10, nfix=4, drift=TRUE)
 
 par(mfrow=c(2,1),mar=c(3,3,2,1),cex=.8)
 plot(unemp.bw1$x,
-     main="Butterworth filter of unemployment: Trend, 
+     main="Butterworth filter of unemployment: Trend,
      drift=TRUE",col=1, ylab="")
 lines(unemp.bw1$trend,col=2)
 lines(unemp.bw2$trend,col=3)
 lines(unemp.bw3$trend,col=4)
 lines(unemp.bw4$trend,col=5)
-legend("topleft",legend=c("series", "freq=10, nfix=2", 
-       "freq=8, nfix=2", "freq=10, nfix=3", "freq=10, nfix=4"), 
+legend("topleft",legend=c("series", "freq=10, nfix=2",
+       "freq=8, nfix=2", "freq=10, nfix=3", "freq=10, nfix=4"),
        col=1:5, lty=rep(1,5), ncol=1)
 
 plot(unemp.bw1$cycle,
-     main="Butterworth filter of unemployment: Cycle,drift=TRUE", 
+     main="Butterworth filter of unemployment: Cycle,drift=TRUE",
      col=2, ylab="", ylim=range(unemp.bw3$cycle,na.rm=TRUE))
 lines(unemp.bw2$cycle,col=3)
 lines(unemp.bw3$cycle,col=4)
 lines(unemp.bw4$cycle,col=5)
 ## legend("topleft",legend=c("series", "freq=10, nfix=2", "freq=8,
-## nfix=2", "freq## =10, nfix=3", "freq=10, nfix=4"), col=1:5, 
+## nfix=2", "freq## =10, nfix=3", "freq=10, nfix=4"), col=1:5,
 ## lty=rep(1,5), ncol=1)
 
 par(opar)

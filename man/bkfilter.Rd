@@ -9,7 +9,7 @@
   This function implements the Baxter-King approximation to
   the band pass filter for a time series. The function computes cyclical
   and trend components of the time series using band-pass
-  approximation for fixed and variable length filters. 
+  approximation for fixed and variable length filters.
 }
 
 \usage{
@@ -20,7 +20,7 @@ bkfilter(x,pl=NULL,pu=NULL,nfix=NULL,type=c("fixed","variable"),drift=FALSE)
   \item{x}{a regular time series}
 
   \item{type}{character, indicating the filter type,
-    \code{"fixed"}, for the fixed length Baxter-King filter 
+    \code{"fixed"}, for the fixed length Baxter-King filter
     (default),
     \code{"variable"}, for the variable length Baxter-King filter.}
 
@@ -30,7 +30,7 @@ bkfilter(x,pl=NULL,pu=NULL,nfix=NULL,type=c("fixed","variable"),drift=FALSE)
 
   \item{drift}{logical, \code{FALSE} if no drift in time series
     (default),  \code{TRUE} if drift in time series.}
-  
+
   \item{nfix}{sets fixed lead/lag length or order of the filter. The
   \code{nfix} option sets the order of the filter by 2*nfix+1. The
   default is \code{frequency(x)*3}.}
@@ -41,7 +41,7 @@ bkfilter(x,pl=NULL,pu=NULL,nfix=NULL,type=c("fixed","variable"),drift=FALSE)
 following framework. Given a time series \eqn{\{x_t\}^T_{t=1}} we are
 interested in isolating component of \eqn{x_t}, denoted \eqn{y_t} with
 period of oscillations between \eqn{p_l} and \eqn{p_u}, where \eqn{2
-  \le p_l < p_u < \infty}. 
+  \le p_l < p_u < \infty}.
 
 Consider the following decomposition of the time series
 \deqn{x_t = y_t + \bar{x}_t}
@@ -96,7 +96,7 @@ filters. Journal of Econometrics, 99:317-334, 2000.
 }
 
 \author{
-  Mehmet Balcilar, \email{mbalcilar@yahoo.com}
+  Mehmet Balcilar, \email{mehmet@mbalcilar.net}
 }
 
 \seealso{
@@ -126,11 +126,11 @@ lines(unemp.bk1$trend,col=2)
 lines(unemp.bk2$trend,col=3)
 lines(unemp.bk3$trend,col=4)
 lines(unemp.bk4$trend,col=5)
-legend("topleft",legend=c("series", "pl=2, pu=32", "pl=8, pu=40", 
+legend("topleft",legend=c("series", "pl=2, pu=32", "pl=8, pu=40",
       "pl=2, pu=60", "pl=2, pu=40"), col=1:5, lty=rep(1,5), ncol=1)
 
 plot(unemp.bk1$cycle,
-main="Baxter-King filter of unemployment: Cycle,drift=TRUE", 
+main="Baxter-King filter of unemployment: Cycle,drift=TRUE",
       col=2, ylab="", ylim=range(unemp.bk3$cycle,na.rm=TRUE))
 lines(unemp.bk2$cycle,col=3)
 lines(unemp.bk3$cycle,col=4)

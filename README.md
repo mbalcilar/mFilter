@@ -3,12 +3,12 @@
 
 # mFilter
 
-The package implements several time series filters useful for smoothing
-and extracting trend and cyclical components of a time series. The
-routines are commonly used in economics and finance, however they should
-also be interest to other areas. Currently, Christiano-Fitzgerald,
-Baxter-King, Hodrick-Prescott, Butterworth, and trigonometric regression
-filters are included in the package.
+The mFilter package implements several time series filters useful for
+smoothing and extracting trend and cyclical components of a time series.
+The routines are commonly used in economics and finance, however they
+should also be interest to other areas. Currently,
+Christiano-Fitzgerald, Baxter-King, Hodrick-Prescott, Butterworth, and
+trigonometric regression filters are included in the package.
 
 ## Installation
 
@@ -36,7 +36,7 @@ unemp.bw <- bwfilter(unemp)
 plot(unemp.bw)
 ```
 
-<img src="man/figures/README-ex1-1.png" width="100%" />
+![](README-ex1-1.png)<!-- -->
 
 ``` r
 unemp.bw1 <- bwfilter(unemp, drift=TRUE)
@@ -59,7 +59,7 @@ legend("topleft",legend=c("series", "freq=10, nfix=2",
        col=1:5, lty=rep(1,5), ncol=1)
 ```
 
-<img src="man/figures/README-ex2-1.png" width="100%" />
+![](README-ex2-1.png)<!-- -->
 
 ``` r
 plot(unemp.bw1$cycle,
@@ -70,4 +70,4 @@ lines(unemp.bw3$cycle,col=4)
 lines(unemp.bw4$cycle,col=5)
 ```
 
-<img src="man/figures/README-ex3-1.png" width="100%" />
+![](README-ex3-1.png)<!-- -->
