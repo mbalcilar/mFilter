@@ -94,7 +94,7 @@ cffilter <- function(x,pl=NULL,pu=NULL,root=FALSE,drift=FALSE,
     R = matrix(0,n,1)
     if(nq > 0)
     {
-        R0 = B[1]*cc[1] + 2*t(B[2:(nq+1)])*cc[2:(nq+1)]
+        R0 = B[1]*cc[1] + 2*t(B[2:(nq+1)])%*%cc[2:(nq+1)]
         R[1] = pi*R0
         for(i in 2:n)
         {
