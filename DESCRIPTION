@@ -1,7 +1,7 @@
 Package: mFilter
 Title: Miscellaneous Time Series Filters
 Date: 2019-07-04
-Version: 0.1-5
+Version: 0.1-6
 Author: Mehmet Balcilar <mehmet@mbalcilar.net>
 Depends: R (>= 2.2.0), stats
 Suggests: tseries, pastecs, locfit, tseriesChaos, tsDyn,
@@ -17,4 +17,4 @@ Maintainer: Mehmet Balcilar <mehmet@mbalcilar.net>
 License: GPL (>= 2)
 URL: http://www.mbalcilar.net
 Encoding: UTF-8
-RoxygenNote: 6.1.1
+RoxygenNote: 7.2.3

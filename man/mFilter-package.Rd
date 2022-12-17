@@ -143,6 +143,28 @@ If \code{drift=TRUE} the drift adjusted series is obtained as
 where \eqn{\tilde{x}_{t}} is the undrifted series.
 }
 
+\section{How to cite this package}{
+  Whenever using this package, please cite as\cr
+
+Balcilar, M. (2019). mFilter: Miscellaneous Time Series Filters. R package version 1.5-0.
+https://github.com/mbalcilar/mFilter.
+
+ \preformatted{@Manual{Balcilar_2019,
+ author       = {Mehmet Balcilar},
+ title        = {{mFilter}: Miscellaneous Time Series Filters.},
+ year         = {2019},
+ note         = {R package version 1.5-0.},
+ URL          = {https://github.com/mbalcilar/mFilter}}}
+}
+
+\section{License}{
+  The releases of this package is licensed under GPL version 3.
+}
+
+\author{
+  Mehmet Balcilar, \email{mehmet@mbalcilar.net}
+}
+
 
 \references{
 M. Baxter and R.G. King. Measuring business cycles: Approximate bandpass
@@ -163,10 +185,6 @@ D.S.G. Pollock. Trend estimation and de-trending via rational square-wave
 filters. Journal of Econometrics, 99:317-334, 2000.
 }
 
-
-\author{
-  Mehmet Balcilar, \email{mehmet@mbalcilar.net}
-}
 
 \seealso{
 \code{\link{mFilter-methods}} for listing all currently
