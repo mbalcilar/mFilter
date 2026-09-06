@@ -1,0 +1,11 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^cran-comments\.md$
+^README\.Rmd$
+^README-.*\.png$
+^CRAN-RELEASE$
+^\.DS_Store$
+^\.Rhistory$
+^\.gitignore$
+^\.git$
+^\.\.(Rcheck)$

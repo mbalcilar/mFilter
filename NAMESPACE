@@ -10,6 +10,7 @@ export("mFilter",
        "cffilter",
        "hpfilter",
        "trfilter",
+       "bnfilter",
        "print.mFilter",
        "summary.mFilter",
        "plot.mFilter",
@@ -17,6 +18,7 @@ export("mFilter",
        "residuals.mFilter"
        )
 
+S3method("mFilter", "default")
 S3method("mFilter", "ts")
 S3method("print", "mFilter")
 S3method("summary", "mFilter")

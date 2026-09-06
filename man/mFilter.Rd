@@ -33,7 +33,7 @@ objects. However a default method is available and should work for any
 \usage{
   mFilter(x, \dots)
   \method{mFilter}{default}(x, \dots)
-  \method{mFilter}{ts}(x, filter=c("HP","BK","CF","BW","TR"), \dots)
+  \method{mFilter}{ts}(x, filter=c("HP","BK","CF","BW","TR","BN"), \dots)
 }
 
 \arguments{
@@ -41,13 +41,14 @@ objects. However a default method is available and should work for any
 
   \item{filter}{filter type, the filter types are \code{"HP"}
   (Hodrick-Prescott), \code{"BK"} (Baxter-King), \code{"CF"}
-  (Christiano-Fitzgerald), \code{"BW"} (Butterworth), and \code{"TR"}
-  (trigonometric regression).}
+  (Christiano-Fitzgerald), \code{"BW"} (Butterworth), \code{"TR"}
+  (trigonometric regression), and \code{"BN"} (Beveridge-Nelson).}
 
 \item{...}{Additional arguments to pass to the relevant filter
-  functions. These are passed to \code{hpfilter},  \code{bkfilter},
-  \code{cffilter}, \code{bwfilter}, and \code{trfilter}, respectively for
-  the \code{"HP"}, \code{"BK"}, \code{"CF"}, \code{"BW"}, and \code{"TR"} filters.}
+  functions. These are passed to \code{hpfilter}, \code{bkfilter},
+  \code{cffilter}, \code{bwfilter}, \code{trfilter}, and \code{bnfilter},
+  respectively for the \code{"HP"}, \code{"BK"}, \code{"CF"}, \code{"BW"},
+  \code{"TR"}, and \code{"BN"} filters.}
 }
 
 \value{

@@ -1,10 +1,13 @@
 Package: mFilter
 Title: Miscellaneous Time Series Filters
-Date: 2019-07-04
-Version: 0.1-6
-Author: Mehmet Balcilar <mehmet@mbalcilar.net>
+Date: 2026-09-06
+Version: 0.1-8
+Authors@R: person(given = "Mehmet",
+                    family = "Balcilar",
+                    role = c("aut", "cre"),
+                    email = "mehmet@mbalcilar.net")
 Depends: R (>= 2.2.0), stats
-Suggests: tseries, pastecs, locfit, tseriesChaos, tsDyn,
+Suggests: tseries, pastecs, locfit, tseriesChaos,
         forecast
 Description: The mFilter package implements several time series filters useful
         for smoothing and extracting trend and cyclical components of a

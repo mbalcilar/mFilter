@@ -5,7 +5,7 @@ mFilter <- function(x, ...) UseMethod("mFilter")
 
 mFilter.default <- function(x, ...) mFilter.ts(x, ...)
 
-mFilter.ts <- function(x, filter=c("HP","BK","CF","BW","TR"), ...)
+mFilter.ts <- function(x, filter=c("HP","BK","CF","BW","TR","BN"), ...)
 {
     filt = match.arg(filter)
     call = match.call()
@@ -16,7 +16,8 @@ mFilter.ts <- function(x, filter=c("HP","BK","CF","BW","TR"), ...)
            "CF" = {res <- cffilter(x,pl=ag$pl,pu=ag$pu,root=ag$root,drift=ag$drift,
                                  type=ag$type, nfix=ag$nfix,theta=ag$theta)},
            "BW" = {res <- bwfilter(x,freq=ag$freq,nfix=ag$nfix,drift=ag$drift)},
-           "TR" = {res <- trfilter(x,pl=ag$pl,pu=ag$pu,drift=ag$drift)}
+           "TR" = {res <- trfilter(x,pl=ag$pl,pu=ag$pu,drift=ag$drift)},
+           "BN" = {res <- bnfilter(x,p=ag$p,q<-ag$q,phi<-ag$phi,theta<-ag$theta,drift<-ag$drift)}
                   )
     res$xname <- deparse(substitute(x))
     return(res)
